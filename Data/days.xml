@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE days SYSTEM "timetable.dtd">
+<days>
+    <day type="Monday">
+        <booking>
+            <instructor>Catherine Ryan</instructor>
+            <room>SW3 4785</room>
+            <bookingtype>Lab</bookingtype>
+            <timeslot>930</timeslot>
+            <coursename>BLAW 3600</coursename>
+        </booking>
+
+        <booking>
+            <instructor>Mirela Gutica</instructor>
+            <room>SW1 1205</room>
+            <bookingtype>Lecture</bookingtype>
+            <timeslot>1130</timeslot>
+            <coursename>COMP 4735</coursename>
+        </booking>
+
+        <booking>
+            <instructor>Mirela Gutica</instructor>
+            <room>SE12 320</room>
+            <bookingtype>Lab</bookingtype>
+            <timeslot>1230</timeslot>
+            <coursename>COMP 4735</coursename>
+        </booking>
+    </day>
+
+    <day type="Tuesday">
+        <booking>
+            <instructor>D'Arcy Smith</instructor>
+            <room>SE12 325</room>
+            <bookingtype>Seminar</bookingtype>
+            <timeslot>830</timeslot>
+            <coursename>COMP 4977</coursename>
+        </booking>
+
+        <booking>
+            <instructor>Brenda Fine</instructor>
+            <room>SW5 1850</room>
+            <bookingtype>Lecture</bookingtype>
+            <timeslot>1130</timeslot>
+            <coursename>COMP 4560</coursename>
+        </booking>
+
+        <booking>
+            <instructor>James Parry</instructor>
+            <room>SW5 1840</room>
+            <bookingtype>Lecture</bookingtype>
+            <timeslot>1430</timeslot>
+            <coursename>COMP 4711</coursename>
+        </booking>
+
+        <booking>
+            <instructor>Joseph Lo</instructor>
+            <room>SE12 322</room>
+            <bookingtype>Lab</bookingtype>
+            <timeslot>1530</timeslot>
+            <coursename>COMP 4560</coursename>
+        </booking>
+    </day>
+
+    <day type="Wednesday">
+        <booking>
+            <instructor>James Parry</instructor>
+            <room>SE12 322</room>
+            <bookingtype>Lab</bookingtype>
+            <timeslot>930</timeslot>
+            <coursename>COMP 4711</coursename>
+        </booking>
+
+        <booking>
+            <instructor>Mirela Gutica</instructor>
+            <room>SW1 1205</room>
+            <bookingtype>Lecture</bookingtype>
+            <timeslot>1330</timeslot>
+            <coursename>COMP 4735</coursename>
+        </booking>
+    </day>
+
+    <day type="Thursday">
+        <booking>
+            <instructor>Medhat Elmasry</instructor>
+            <room>SE12 308</room>
+            <bookingtype>Seminar</bookingtype>
+            <timeslot>830</timeslot>
+            <coursename>COMP 4976</coursename>
+        </booking>
+
+        <booking>
+            <instructor>Mirela Gutica</instructor>
+            <room>SW3 1710</room>
+            <bookingtype>Lecture</bookingtype>
+            <timeslot>1130</timeslot>
+            <coursename>COMP 4735</coursename>
+        </booking>
+
+        <booking>
+            <instructor>Medhat Elmasry</instructor>
+            <room>SE12 308</room>
+            <bookingtype>Seminar</bookingtype>
+            <timeslot>1230</timeslot>
+            <coursename>COMP 4976</coursename>
+        </booking>
+    </day>
+
+    <day type="Friday">
+        <booking>
+            <instructor>Catherine Ryan</instructor>
+            <room>SW5 1840</room>
+            <bookingtype>Lecture</bookingtype>
+            <timeslot>830</timeslot>
+            <coursename>BLAW 3600</coursename>
+        </booking>
+
+        <booking>
+            <instructor>Medhat Elmasry</instructor>
+            <room>SE12 308</room>
+            <bookingtype>Seminar</bookingtype>
+            <timeslot>1030</timeslot>
+            <coursename>COMP 4976</coursename>
+        </booking>
+
+        <booking>
+            <instructor>Brenda Fine</instructor>
+            <room>SE12 308</room>
+            <bookingtype>Lecture</bookingtype>
+            <timeslot>1230</timeslot>
+            <coursename>COMP 4560</coursename>
+        </booking>
+
+        <booking>
+            <instructor>D'Arcy Smith</instructor>
+            <room>SE12 325</room>
+            <bookingtype>Seminar</bookingtype>
+            <timeslot>1430</timeslot>
+            <coursename>COMP 4977</coursename>
+        </booking>
+    </day>
+</days>
