@@ -52,8 +52,25 @@
     <course code="COMP 4711">
         <booking>
             <instructor>James Parry</instructor>
-            <room>SW5 1850</room>
+            <room>SW5 1840</room>
             <bookingtype>Lecture</bookingtype>
+        </booking>
+    </course>
+
+
+    <course code="COMP 4560">
+        <booking>
+            <instructor>Joseph Lo</instructor>
+            <room>SE12 322</room>
+            <bookingtype>Lab</bookingtype>
+        </booking>
+    </course>
+
+    <course code="COMP 4711">
+        <booking>
+            <instructor>James Parry</instructor>
+            <room>SE12 320</room>
+            <bookingtype>Lab</bookingtype>
         </booking>
     </course>
 
@@ -64,5 +81,31 @@
             <bookingtype>Seminar</bookingtype>
         </booking>
     </course>
+
+    <course code="COMP 4735">
+        <booking>
+            <instructor>Mirela Gutica</instructor>
+            <room>SW3 1710</room>
+            <bookingtype>Lecture</bookingtype>
+        </booking>
+    </course>
+
+    <course code="BLAW 3600">
+        <booking>
+            <instructor>Catherine Ryan</instructor>
+            <room>SW5 1840</room>
+            <bookingtype>Lecture</bookingtype>
+        </booking>
+    </course>
+
+    <course code="COMP 4560">
+        <booking>
+            <instructor>Catherine Ryan</instructor>
+            <room>SW3 1750</room>
+            <bookingtype>Lecture</bookingtype>
+        </booking>
+    </course>
+
+
 
 </courses>
