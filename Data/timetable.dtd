@@ -1,3 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!ELEMENT _ROOT_ ANY>
+<!-- Root Element -->
+<!ELEMENT schedule (courses, days)>
+
+<!-- Courses -->
+<!ELEMENT courses (course)>
+<!ELEMENT course (booking)>
+<!ATTLIST course code #REQUIRED>
+
+<!-- Days -->
+<!ELEMENT days (day)>
+<!ELEMENT day (booking*)>
+<!ATTLIST day type #REQUIRED>
+
+<!-- Bookings -->
+<!ELEMENT booking (instructor, room, bookingtype, timeslot?, coursename?)>
+<!ELEMENT instructor (#PCDATA)>
+<!ELEMENT room (#PCDATA)>
+<!ELEMENT bookingtype (#PCDATA)>
+<!ELEMENT timeslot (#PCDATA)>
+<!ELEMENT coursename (#PCDATA)>
