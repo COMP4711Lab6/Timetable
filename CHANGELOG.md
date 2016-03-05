@@ -2,6 +2,9 @@
 All notable changes to this project will be documented to this file.
 Change Log history will be recorded in descending order
 
+## 0.0.5
+Update case of the data folder to match name convention
+
 ## 0.0.4.1
 ** Modified Files **
 - periods.xml
