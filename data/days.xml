@@ -83,7 +83,7 @@
         <booking>
             <instructor>Medhat Elmasry</instructor>
             <location>SE12 308</location>
-            <bookingtype>Seminar</bookingtype>
+            <classtype>Seminar</classtype>
             <time>830</time>
             <class>COMP 4976</class>
         </booking>
