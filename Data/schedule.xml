@@ -1,1 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE schedule SYSTEM "timetable.dtd" [
+        <!ENTITY courses    SYSTEM "courses.xml">
+        <!ENTITY days       SYSTEM "days.xml">
+        <!ENTITY periods    SYSTEM "periods.xml">
+]>
+<schedule set="4S" term="Winter 2016">
+    &courses;
+    &days;
+    &periods;
+</schedule>
