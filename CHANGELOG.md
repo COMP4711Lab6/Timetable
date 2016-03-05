@@ -5,6 +5,9 @@ Change Log history will be recorded in descending order
 ## 0.0.3
 ** Modified Files **
 - periods.xml
+- Updated the dtd file to validate courses and days xml files
+- timetable.dtd
+
 
 ## 0.0.2
 ** Modified Files **
