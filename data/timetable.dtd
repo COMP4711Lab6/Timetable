@@ -2,6 +2,8 @@
 
 <!-- Root Element -->
 <!ELEMENT schedule (courses, days)>
+<!ATTLIST schedule set #REQUIRED>
+<!ATTLIST schedule term #REQUIRED>
 
 <!-- Courses -->
 <!ELEMENT courses (course*)>
