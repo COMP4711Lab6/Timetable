@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE periods SYSTEM "timetable.dtd">
+<periods>
+    <period type="830">
+        <booking>
+            <instructor>D'Arcy Smith</instructor>
+            <location>SE12 325</location>
+            <classtype>Seminar</classtype>
+            <dayofweek>Tuesday</dayofweek>
+            <class>COMP 4977</class>
+        </booking>
+
+        <booking>
+            <instructor>Medhat Elmasry</instructor>
+            <location>SE12 308</location>
+            <classtype>Seminar</classtype>
+            <dayofweek>Thursday</dayofweek>
+            <class>COMP 4976</class>
+        </booking>
+
+        <booking>
+            <instructor>Catherine Ryan</instructor>
+            <location>SW5 1840</location>
+            <classtype>Lecture</classtype>
+            <dayofweek>Friday</dayofweek>
+            <class>BLAW 3600</class>
+        </booking>
+    </period>
+
+    <period type="930">
+        <booking>
+            <instructor>Catherine Ryan</instructor>
+            <location>SW3 4785</location>
+            <classtype>Lab</classtype>
+            <dayofweek>Monday</dayofweek>
+            <class>BLAW 3600</class>
+        </booking>
+
+        <booking>
+            <instructor>James Parry</instructor>
+            <location>SE12 320</location>
+            <classtype>Lab</classtype>
+            <dayofweek>Wednesday</dayofweek>
+            <class>COMP 4711</class>
+        </booking>
+    </period>
+
+    <period type="1030">
+        <booking>
+            <instructor>Medhat Elmasry</instructor>
+            <location>SE12 308</location>
+            <classtype>Seminar</classtype>
+            <dayofweek>Friday</dayofweek>
+            <class>COMP 4976</class>
+        </booking>
+    </period>
+
+    <period type="1130">
+        <booking>
+            <instructor>Mirela Gutica</instructor>
+            <location>SW1 1205</location>
+            <classtype>Lecture</classtype>
+            <dayofweek>Monday</dayofweek>
+            <class>COMP 4735</class>
+        </booking>
+
+        <booking>
+            <instructor>Brenda Fine</instructor>
+            <location>SW5 1850</location>
+            <classtype>Lecture</classtype>
+            <dayofweek>Tuesday</dayofweek>
+            <class>COMP 4560</class>
+        </booking>
+
+        <booking>
+            <instructor>Mirela Gutica</instructor>
+            <location>SW3 1710</location>
+            <classtype>Lecture</classtype>
+            <dayofweek>Thursday</dayofweek>
+            <class>COMP 4735</class>
+        </booking>
+    </period>
+
+    <period type="1230">
+        <booking>
+            <instructor>Mirela Gutica</instructor>
+            <location>SE12 320</location>
+            <classtype>Lab</classtype>
+            <dayofweek>Monday</dayofweek>
+            <class>COMP 4735</class>
+        </booking>
+
+        <booking>
+            <instructor>Medhat Elmasry</instructor>
+            <location>SE12 308</location>
+            <classtype>Seminar</classtype>
+            <dayofweek>Thursday</dayofweek>
+            <class>COMP 4976</class>
+        </booking>
+
+        <booking>
+            <instructor>Brenda Fine</instructor>
+            <location>SE3 1750</location>
+            <classtype>Lecture</classtype>
+            <dayofweek>Friday</dayofweek>
+            <class>COMP 4560</class>
+        </booking>
+    </period>
+
+    <period type="1330">
+        <booking>
+            <instructor>Mirela Gutica</instructor>
+            <location>SW1 1205</location>
+            <classtype>Lecture</classtype>
+            <dayofweek>Wednesday</dayofweek>
+            <class>COMP 4735</class>
+        </booking>
+    </period>
+
+    <period type="1430">
+        <booking>
+            <instructor>James Parry</instructor>
+            <location>SW5 1840</location>
+            <classtype>Lecture</classtype>
+            <dayofweek>Tuesday</dayofweek>
+            <class>COMP 4711</class>
+        </booking>
+
+        <booking>
+            <instructor>D'Arcy Smith</instructor>
+            <location>SE12 325</location>
+            <classtype>Seminar</classtype>
+            <dayofweek>Friday</dayofweek>
+            <class>COMP 4977</class>
+        </booking>
+    </period>
+
+    <period type="1530">
+        <booking>
+            <instructor>Joseph Lo</instructor>
+            <location>SE12 322</location>
+            <classtype>Lab</classtype>
+            <dayofweek>Tuesday</dayofweek>
+            <class>COMP 4560</class>
+        </booking>
+
+        <booking>
+            <instructor>D'Arcy Smith</instructor>
+            <location>SE12 325</location>
+            <classtype>Seminar</classtype>
+            <dayofweek>Friday</dayofweek>
+            <class>COMP 4977</class>
+        </booking>
+    </period>
+
+</periods>
