@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE periods SYSTEM "timetable.dtd">
+<periods>
+    <period type="830">
+        <booking>
+            <instructor>D'Arcy Smith</instructor>
+            <location>SE12 325</location>
+            <classtype>Seminar</classtype>
+            <dayofweek>Tuesday</dayofweek>
+            <class>COMP 4977</class>
+        </booking>
+
+        <booking>
+            <instructor>Medhat Elmasry</instructor>
+            <location>SE12 308</location>
+            <classtype>Seminar</classtype>
+            <dayofweek>Thursday</dayofweek>
+            <class>COMP 4976</class>
+        </booking>
+
+        <booking>
+            <instructor>Catherine Ryan</instructor>
+            <location>SW5 1840</location>
+            <classtype>Lecture</classtype>
+            <dayofweek>Friday</dayofweek>
+            <class>BLAW 3600</class>
+        </booking>
+    </period>
+
+    <period type="930">
+        <booking>
+            <instructor>Catherine Ryan</instructor>
+            <location>SW3 4785</location>
+            <classtype>Lab</classtype>
+            <dayofweek>Monday</dayofweek>
+            <class>BLAW 3600</class>
+        </booking>
+
+        <booking>
+            <instructor>Medhat Elmasry</instructor>
+            <location>SE12 308</location>
+            <classtype>Seminar</classtype>
+            <dayofweek>Thursday</dayofweek>
+            <class>COMP 4976</class>
+        </booking>
+    </period>
+</periods>
