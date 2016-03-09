@@ -2,13 +2,13 @@
 
 <!-- Root Element -->
 <!ELEMENT schedule (courses, days)>
-<!ATTLIST schedule set #REQUIRED>
-<!ATTLIST schedule term #REQUIRED>
+<!ATTLIST schedule set CDATA #REQUIRED>
+<!ATTLIST schedule term CDATA #REQUIRED>
 
 <!-- Courses -->
 <!ELEMENT courses (course*)>
 <!ELEMENT course (booking*)>
-<!ATTLIST course code #REQUIRED>
+<!ATTLIST course code CDATA #REQUIRED>
 
 <!-- Days -->
 <!ELEMENT days (day*)>
