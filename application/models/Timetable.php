@@ -11,5 +11,10 @@ class Timetable extends CI_Model{
     protected $periods = array();
     protected $days = array();
 
+    public function  __construct()
+    {
+        parent::construct();
+        $this -> xml = simplexml_load_file(DATAPATH,"courses.xml");
 
+    }
 }
