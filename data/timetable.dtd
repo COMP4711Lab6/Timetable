@@ -1,37 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<!-- Root Element -->
-<!ELEMENT schedule (courses, days)>
-<!ATTLIST schedule set CDATA #REQUIRED>
-<!ATTLIST schedule term CDATA #REQUIRED>
-
-<!-- Courses -->
+<!ELEMENT schedule (days,courses,periods)>
+<!ELEMENT periods (timeslot*)>
+<!ELEMENT days (whichday*) >
+<!ELEMENT whichday (booking*)>
+<!ATTLIST whichday name CDATA #REQUIRED>
 <!ELEMENT courses (course*)>
 <!ELEMENT course (booking*)>
-<!ATTLIST course code CDATA #REQUIRED>
-
-<!-- Days -->
-<!ELEMENT days (day*)>
-<!ELEMENT day (booking*)>
-<!ATTLIST day type (Monday|Tuesday|Wednesday|Thursday|Friday) #REQUIRED>
-
-<!-- Periods -->
-<!ELEMENT periods (period*)>
-<!ELEMENT period (booking*)>
-<!ATTLIST period type (830|930|1030|1130|1230|1330|1430|1530|1630) #REQUIRED>
-
-<!-- Bookings -->
-<!ELEMENT booking (
-        instructor,
-        location,
-        classtype,
-        time?,
-        dayofweek?,
-        class?
-        )>
-<!ELEMENT instructor (#PCDATA)>
-<!ELEMENT location (#PCDATA)>
-<!ELEMENT classtype (#PCDATA)>
-<!ELEMENT time (#PCDATA)>
+<!ATTLIST course name CDATA #REQUIRED>
+<!ELEMENT timeslot (booking*)>
+<!ATTLIST timeslot time CDATA #REQUIRED>
+<!ELEMENT booking (dayofweek?, class?, teacher, location, classtype)>
+<!ATTLIST booking day CDATA #IMPLIED time CDATA #IMPLIED>
 <!ELEMENT dayofweek (#PCDATA)>
 <!ELEMENT class (#PCDATA)>
+<!ELEMENT teacher (#PCDATA)>
+<!ELEMENT location (#PCDATA)>
+<!ELEMENT classtype (#PCDATA)>
