@@ -2,6 +2,21 @@
 All notable changes to this project will be documented to this file.
 Change Log history will be recorded in descending order
 
+## 0.0.7
+** Added Files **
+- Timetable.php
+
+## 0.0.6
+** Added Files **
+- timetable.dtd
+- timetable.xml
+
+** Deleted Files **
+- course.xml
+- period.xml
+- schedule.xml
+- days.xml
+
 ## 0.0.5
 Update case of the data folder to match name convention
 
