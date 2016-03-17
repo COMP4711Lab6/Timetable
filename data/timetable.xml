@@ -3,19 +3,19 @@
 <schedule>
     <days>
         <whichday name="Monday">
-            <booking time="9:30-11:20">
+            <booking timeslot="9:30-11:20">
                 <class>BLAW 3600</class>
                 <teacher>Catherine Ryan</teacher>
                 <location>sw3 4785</location>
                 <classtype>Lab</classtype>
             </booking>
-            <booking time="11:30-12:20">
+            <booking timeslot="11:30-12:20">
                 <class>COMP 4735</class>
                 <teacher>Mirela Gutica</teacher>
                 <location>SW1 4735</location>
                 <classtype>Lecture</classtype>
             </booking>
-            <booking time="12:30-14:20">
+            <booking timeslot="12:30-14:20">
                 <class>COMP 4735</class>
                 <teacher>Mirela Gutica</teacher>
                 <location>se12 320</location>
@@ -23,25 +23,25 @@
             </booking>
         </whichday>
         <whichday name="Tuesday">
-            <booking time="8:30-10:20">
+            <booking timeslot="8:30-10:20">
                 <class>COMP 4977</class>
                 <teacher>D'Arcy Smith</teacher>
                 <location>se12 325</location>
                 <classtype>Lab</classtype>
             </booking>
-            <booking time="11:30-12:20">
+            <booking timeslot="11:30-12:20">
                 <class>COMP 4560</class>
                 <teacher>Brenda Fine</teacher>
                 <location>sw5 1850</location>
                 <classtype>Lecture</classtype>
             </booking>
-            <booking time="14:30-15:20">
+            <booking timeslot="14:30-15:20">
                 <class>COMP 4711</class>
                 <teacher>Jim Parry</teacher>
                 <location>sw5 1840</location>
                 <classtype>Lecture</classtype>
             </booking>
-            <booking time="15:30-17:20">
+            <booking timeslot="15:30-17:20">
                 <class>COMP 4560</class>
                 <teacher>Joseph Lo</teacher>
                 <location>se12 322</location>
@@ -49,13 +49,13 @@
             </booking>
         </whichday>
         <whichday name="Wednesday">
-            <booking time="9:30-11:20">
+            <booking timeslot="9:30-11:20">
                 <class>COMP 4711</class>
                 <teacher>Jim Parry</teacher>
                 <location>se12 320</location>
                 <classtype>Lab</classtype>
             </booking>
-            <booking time="13:30-14:20">
+            <booking timeslot="13:30-14:20">
                 <class>COMP 4735</class>
                 <teacher>Mirela Gutica</teacher>
                 <location>sw1 1205</location>
@@ -63,19 +63,19 @@
             </booking>
         </whichday>
         <whichday name="Thursday">
-            <booking time="8:30-10:20">
+            <booking timeslot="8:30-10:20">
                 <class>COMP 4976</class>
                 <teacher>Medhat Elmasry</teacher>
                 <location>se12 308</location>
                 <classtype>Lab</classtype>
             </booking>
-            <booking time="11:30-12:20">
+            <booking timeslot="11:30-12:20">
                 <class>COMP 4735</class>
                 <teacher>Mirela Gutica</teacher>
                 <location>sw3 1710</location>
                 <classtype>Lecture</classtype>
             </booking>
-            <booking time="12:30-13:20">
+            <booking timeslot="12:30-13:20">
                 <class>COMP 4976</class>
                 <teacher>Medhat Elmasry</teacher>
                 <location>se12 308</location>
@@ -83,25 +83,25 @@
             </booking>
         </whichday>
         <whichday name="Friday">
-            <booking time="8:30-10:20">
+            <booking timeslot="8:30-10:20">
                 <class>BLAW 3600</class>
                 <teacher>Catherine Ryan</teacher>
                 <location>sw5 1840</location>
                 <classtype>Lecture</classtype>
             </booking>
-            <booking time="10:30-12:20">
+            <booking timeslot="10:30-12:20">
                 <class>COMP 4976</class>
                 <teacher>Medhat Elmasry</teacher>
                 <location>se12 308</location>
                 <classtype>Lab</classtype>
             </booking>
-            <booking time="12:30-13:20">
+            <booking timeslot="12:30-13:20">
                 <class>COMP 4560</class>
                 <teacher>Brenda Fine</teacher>
                 <location>sw3 1750</location>
                 <classtype>Lecture</classtype>
             </booking>
-            <booking time="14:30-17:20">
+            <booking timeslot="14:30-17:20">
                 <class>COMP 4977</class>
                 <teacher>D'Arcy Smith</teacher>
                 <location>se12 325</location>
@@ -113,107 +113,107 @@
 
     <courses>
         <course name="BLAW 3600">
-            <booking time="9:30-11:20">
+            <booking timeslot="9:30-11:20">
                 <dayofweek>Monday</dayofweek>
                 <teacher>Catherine Ryan</teacher>
                 <location>SW1 4785</location>
                 <classtype>Lab</classtype>
             </booking>
-            <booking time="8:30-10:20">
+            <booking timeslot="8:30-10:20">
                 <dayofweek>Friday</dayofweek>
                 <teacher>Catherine Ryan</teacher>
                 <location>SW5 1840</location>
                 <classtype>Lecture</classtype>
             </booking>
         </course>
-        <course name="OS 4735">
-            <booking time="11:30-12:20">
+        <course name="COMP 4735">
+            <booking timeslot="11:30-12:20">
                 <dayofweek>Monday</dayofweek>
                 <teacher>Mirela Gutica</teacher>
                 <location>SW1 1205</location>
                 <classtype>Lecture</classtype>
             </booking>
-            <booking time="12:30-14:20">
+            <booking timeslot="12:30-14:20">
                 <dayofweek>Monday</dayofweek>
                 <teacher>Mirela Gutica</teacher>
                 <location>SE12 320</location>
                 <classtype>lab</classtype>
             </booking>
-            <booking time="13:30-14:20">
+            <booking timeslot="13:30-14:20">
                 <dayofweek>Wednesday</dayofweek>
                 <teacher>Mirela Gutica</teacher>
                 <location>SW1 1205</location>
                 <classtype>lecture</classtype>
             </booking>
-            <booking time="11:30-12:20">
+            <booking timeslot="11:30-12:20">
                 <dayofweek>Thursday</dayofweek>
                 <teacher>Mirela Gutica</teacher>
                 <location>SW3 1710</location>
                 <classtype>lecture</classtype>
             </booking>
         </course>
-        <course name="IOS 4977">
-            <booking time="8:30-10:20">
+        <course name="COMP 4977">
+            <booking timeslot="8:30-10:20">
                 <dayofweek>Tuesday</dayofweek>
                 <teacher>D'arcy Smith</teacher>
                 <location>SE12 325</location>
                 <classtype>seminar</classtype>
             </booking>
-            <booking time="14:30-17:20">
+            <booking timeslot="14:30-17:20">
                 <dayofweek>Friday</dayofweek>
                 <teacher>D'arcy Smith</teacher>
                 <location>SE12 325</location>
                 <classtype>seminar</classtype>
             </booking>
         </course>
-        <course name="GRAPHICS 4560">
-            <booking time="11:30-12:20">
+        <course name="COMP 4560">
+            <booking timeslot="11:30-12:20">
                 <dayofweek>Tuesday</dayofweek>
                 <teacher>Brenda Fine</teacher>
                 <location>SW5 1850</location>
                 <classtype>Lecture</classtype>
             </booking>
-            <booking time="15:30-17:20">
+            <booking timeslot="15:30-17:20">
                 <dayofweek>Tuesday</dayofweek>
                 <teacher>Joseph Lo</teacher>
                 <location>SE12 320</location>
                 <classtype>lab</classtype>
             </booking>
-            <booking time="12:30-13:20">
+            <booking timeslot="12:30-13:20">
                 <dayofweek>Friday</dayofweek>
                 <teacher>Brenda Fine</teacher>
                 <location>SW3 1750</location>
                 <classtype>lecture</classtype>
             </booking>
         </course>
-        <course name="SDEV 4711">
-            <booking time="14:30-15:20">
+        <course name="COMP 4711">
+            <booking timeslot="14:30-15:20">
                 <dayofweek>Tuesday</dayofweek>
                 <teacher>Jim Parry</teacher>
                 <location>SW1 1840</location>
                 <classtype>Lecture</classtype>
             </booking>
-            <booking time="9:30-11:20">
+            <booking timeslot="9:30-11:20">
                 <dayofweek>Wednesday</dayofweek>
                 <teacher>Jim Parry</teacher>
                 <location>SE12 320</location>
                 <classtype>lab</classtype>
             </booking>
         </course>
-        <course name="ASP 4976">
-            <booking time="8:30-10:20">
+        <course name="COMP 4976">
+            <booking timeslot="8:30-10:20">
                 <dayofweek>Thursday</dayofweek>
                 <teacher>Medhat Elmasry</teacher>
                 <location>SE12 308</location>
                 <classtype>Seminar</classtype>
             </booking>
-            <booking time="12:30-13:20">
+            <booking timeslot="12:30-13:20">
                 <dayofweek>Thursday</dayofweek>
                 <teacher>Medhat Elmasry</teacher>
                 <location>SE12 308</location>
                 <classtype>Seminar</classtype>
             </booking>
-            <booking time="10:30-12:20">
+            <booking timeslot="10:30-12:20">
                 <dayofweek>Friday</dayofweek>
                 <teacher>Medhat Elmasry</teacher>
                 <location>SE12 308</location>
