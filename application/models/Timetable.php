@@ -1,100 +1,85 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Owner
- * Date: 3/9/16
- * Time: 9:59 AM
- */
-class Timetable extends CI_Model{
-    protected $xml = null;
-    protected $days = null;
-    protected $courses = null;
-    protected $periods = null;
+class Timetable extends CI_Model {
 
-    /**
-     * Timetable constructor.
-     */
-    public function  __construct()
-    {
-        $this->xml = simplexml_load_file('data/timetable.xml');
+    public $xml = null;
+    protected $daysofweek = array();
+    protected $courses = array();
+    protected $periods = array();
 
-        foreach($this->xml->days->whichday as $dayofweek){
-            foreach($dayofweek->booking as $book){
+    public function __construct() {
+        $this->xml = simplexml_load_string(file_get_contents('data/timetable.xml'));
+
+        foreach ($this->xml->daysofweek->day as $day) {
+            foreach ($day->booking as $book) {
                 $element = array();
-                $element['whichday'] = (string)$dayofweek['whichday'];
-                $element['timeslot'] = (string)$book['timeslot'];
-                $element['class'] = (string)$book->class;
-                $element['teacher'] = (string)$book->teacher;
-                $element['location'] = (string)$book->location;
-                $element['classtype'] = (string)$book->classtype;
-                $this->days[] = new Booking($element);
+                $element['day'] = (string) $day['name'];
+                $element['time'] = (string) $book['time'];
+                $element['coursename'] = (string) $book->coursename;
+                $element['teacher'] = (string) $book->teacher;
+                $element['location'] = (string) $book->location;
+                $element['classtype'] = (string) $book->classtype;
+                $this->daysofweek[] = new Booking($element);
             }
         }
 
-        foreach($this->xml->courses->course as $course){
-            foreach($course->booking as $book){
+        foreach ($this->xml->courses->course as $course) {
+            foreach ($course->booking as $book) {
                 $element = array();
-                $element['course'] = (string)$course['name'];
-                $element['timeslot'] = (string)$course['timeslot'];
-                $element['day'] = (string)$book->dayofweek;
-                $element['teacher'] = (string)$book->teacher;
-                $element['location']=(string)$book->location;
-                $element['classtype'] = (string)$book->classtype;
+                $element['coursename'] = (string) $course['name'];
+                $element['time'] = (string) $book['time'];
+                $element['day'] = (string) $book->dayofweek;
+                $element['teacher'] = (string) $book->teacher;
+                $element['location'] = (string) $book->location;
+                $element['classtype'] = (string) $book->classtype;
                 $this->courses[] = new Booking($element);
             }
         }
 
-        foreach($this->xml->periods->timeslot as $time){
-            foreach($time->booking as $book) {
+
+        foreach ($this->xml->periods->timeslot as $period) {
+            foreach ($period->booking as $book) {
                 $element = array();
-                $element['dayofweek'] = (string)$book['day'];
-                $element['timeslot'] = (string)$book['timeslot'];
-                $element['class'] = (string)$book->class;
-                $element['teacher'] = (string)$book->teacher;
-                $element['location'] = (string)$book->location;
-                $element['classtype'] = (string)$book->classtype;
-                $this->periods[]= new Booking($element);
+                $element['day'] = (string) $book['day'];
+                $element['time'] = (string) $period['time'];
+                $element['coursename'] = (string) $book->coursename;
+                $element['teacher'] = (string) $book->teacher;
+                $element['location'] = (string) $book->location;
+                $element['classtype'] = (string) $book->classtype;
+                $this->periods[] = new Booking($element);
             }
         }
     }
 
-    /**
-     * @return accessor to days
-     */
-    public function getDays(){
-        return $this->days;
+    public function getDaysOfWeek() {
+        return $this->daysofweek;
     }
 
-    /**
-     * @return accessor to periods
-     */
     public function getPeriods(){
         return $this->periods;
     }
 
-    /**
-     * @return accessor to courses
-     */
-    public function getCourses()
-    {
+    public function getCourses(){
         return $this->courses;
     }
 
     /**
-     * @return array that makes the dropdown menu for days
+     * Generates array of values for days slot dropdown menu
+     * @return array
      */
-    public function  getDayOfWeek(){
+    public function getDays() {
         return array('Monday' => 'Monday',
-                     'Tuesday'=>'Tuesday',
-                     'Wednesday'=>'Wednesday',
-                     'Thursday'=>'Thursday',
-                      'Friday'=>'Friday');
+                    'Tuesday' => 'Tuesday',
+                    'Wednesday' => 'Wednesday',
+                    'Thursday' => 'Thursday',
+                    'Friday' => 'Friday'
+                    );
     }
 
     /**
-     * @return array that makes the dropdown menu for time slots
+     * Generates array of values for time slot dropdown menu
+     * @return array
      */
-    public function getTimeSlot(){
+    public function getTimeSlots(){
         return array (
             "8:30-10:20" => "8:30 to 10:20",
             "9:30-11:20" => "9:30 to 11:20",
@@ -110,53 +95,68 @@ class Timetable extends CI_Model{
     }
 
     /**
-     * Search for the course
-     * @param $dayOfWeek day of the week from user input
-     * @param $chosenTimeslot time slot from user input
-     * @return booking object for that day at that time
+     * Search the Day facet
+     * @param $day the day value from input
+     * @param $timeslot the time value from input
+     * @return mixed bookings on that day and time
      */
-    public function searchDays($dayOfWeek,$chosenTimeslot){
-        foreach($this->courses as $book){
-            if($book->dayofweek == $dayOfWeek && $book->timeslot == $chosenTimeslot){
-                return $book;
+    public function searchDaysOfWeek($day, $timeslot){
+        foreach($this->daysofweek as $booking){
+            if($booking->day == $day && $booking->time == $timeslot){
+                return $booking;
             }
         }
     }
 
-    public function searchPeriods($dayOfWeek,$chosenTimeslot){
-        foreach($this->periods as $book){
-            if($book->timeslot == $chosenTimeslot && $book->day == $dayOfWeek){
-                return $book;
+    /**
+     * Search the Courses facet
+     * @param $day the day value from input
+     * @param $timeslot the time value from input
+     * @return mixed bookings on that day and time
+     */
+    public function searchCourses($day, $timeslot){
+        foreach($this->courses as $booking){
+            if($booking->day == $day && $booking->time == $timeslot){
+                return $booking;
             }
         }
     }
 
+    /**
+     * Search the Periods facet
+     * @param $day the day value from input
+     * @param $timeslot the time value from input
+     * @return mixed bookings on that day and time
+     */
+    public function searchPeriods($day, $timeslot){
+        foreach($this->periods as $booking){
+            if($booking->day == $day && $booking->time == $timeslot){
+                return $booking;
+            }
+        }
+    }
 
 }
 
 /**
  * Class Booking
+ * Represents a single booking
  */
-class Booking extends CI_Model{
-    public $class;
+class Booking extends CI_Model {
+
+    public $day;
+    public $time;
+    public $coursename;
     public $teacher;
     public $location;
     public $classtype;
-    public $dayofweek;
-    public $timeslot;
 
-    /**
-     * Booking constructor.
-     * @param $booking booking object
-     */
-    public function __construct($booking)
-    {
-        $this->class = (string)$booking['class'];
-        $this->teacher = (string)$booking['teacher'];
-        $this->location = (string)$booking['location'];
-        $this->classtype = (string)$booking['classtype'];
-        $this->dayofweek = (string)$booking['whichday'];
-        $this->timeslot = (string)$booking['timeslot'];
+    public function __construct($booking) {
+        $this->day = (string) $booking['day'];
+        $this->time = (string) $booking['time'];
+        $this->coursename = (string) $booking['coursename'];
+        $this->teacher = (string) $booking['teacher'];
+        $this->location = (string) $booking['location'];
+        $this->classtype = (string) $booking['classtype'];
     }
 }
-

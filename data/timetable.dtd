@@ -1,17 +1,20 @@
-<!ELEMENT schedule (days,courses,periods)>
-<!ELEMENT periods (timeslot*)>
-<!ELEMENT days (whichday*) >
-<!ELEMENT whichday (booking*)>
-<!ATTLIST whichday name CDATA #REQUIRED>
-<!ELEMENT courses (course*)>
-<!ELEMENT course (booking*)>
-<!ATTLIST course name CDATA #REQUIRED>
-<!ELEMENT timeslot (booking*)>
-<!ATTLIST timeslot time CDATA #REQUIRED>
-<!ELEMENT booking (dayofweek?, class?, teacher, location, classtype)>
-<!ATTLIST booking day CDATA #IMPLIED timeslot CDATA #IMPLIED>
-<!ELEMENT dayofweek (#PCDATA)>
-<!ELEMENT class (#PCDATA)>
-<!ELEMENT teacher (#PCDATA)>
-<!ELEMENT location (#PCDATA)>
-<!ELEMENT classtype (#PCDATA)>
+<!ELEMENT schedule (daysofweek,courses,periods)>
+        <!ELEMENT periods (timeslot*)>
+        <!ELEMENT year (#PCDATA)>
+        <!ELEMENT term (#PCDATA)>
+        <!ELEMENT set (#PCDATA)>
+        <!ELEMENT daysofweek (day*) >
+        <!ELEMENT day (booking*)>
+        <!ATTLIST day name CDATA #REQUIRED>
+        <!ELEMENT courses (course*)>
+        <!ELEMENT course (booking*)>
+        <!ATTLIST course name CDATA #REQUIRED>
+        <!ELEMENT timeslot (booking*)>
+        <!ATTLIST timeslot time CDATA #REQUIRED>
+        <!ELEMENT booking (dayofweek?, coursename?, teacher, location, classtype)>
+        <!ATTLIST booking day CDATA #IMPLIED time CDATA #IMPLIED>
+        <!ELEMENT dayofweek (#PCDATA)>
+        <!ELEMENT coursename (#PCDATA)>
+        <!ELEMENT teacher (#PCDATA)>
+        <!ELEMENT location (#PCDATA)>
+        <!ELEMENT classtype (#PCDATA)>
