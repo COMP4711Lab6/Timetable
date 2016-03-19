@@ -155,7 +155,7 @@ class Booking extends CI_Model{
         $this->teacher = (string)$booking['teacher'];
         $this->location = (string)$booking['location'];
         $this->classtype = (string)$booking['classtype'];
-        $this->dayofweek = (string)$booking['dayofweek'];
+        $this->dayofweek = (string)$booking['whichday'];
         $this->timeslot = (string)$booking['timeslot'];
     }
 }

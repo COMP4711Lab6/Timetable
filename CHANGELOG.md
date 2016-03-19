@@ -2,6 +2,10 @@
 All notable changes to this project will be documented to this file.
 Change Log history will be recorded in descending order
 
+## 0.0.8-alpha
+Added a basic template and layout files for the web view
+Tried loading the model but it broke
+
 ## 0.0.7
 ** Added Files **
 - Timetable.php
