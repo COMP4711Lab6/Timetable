@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>All - {pagetitle}</title>
+  <title>{pagetitle} - Timetable</title>
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 </head>
@@ -18,18 +18,11 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/">{pagetitle}</a>
+      <a class="navbar-brand" href="/">Timetable</a>
     </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <form class="navbar-form navbar-left" role="search" method="POST" action="/Welcome/search">
-        <div class="form-group">
-          {daysSearch}
-          {periodSearch}
-        </div>
-        <button type="submit" class="btn btn-default">Search</button>
-      </form>
+      {searchForm}
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>

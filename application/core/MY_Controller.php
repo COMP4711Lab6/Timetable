@@ -16,6 +16,7 @@ class MY_Controller extends CI_Controller {
 
         $this->data = array();
         $this->data['pagetitle'] = 'Timetable';
+        $this->data['searchForm'] = $this->createSearchDropdown();
     }
 
     /**
@@ -28,6 +29,15 @@ class MY_Controller extends CI_Controller {
         $this->data['data'] = &$this->data;
 
         $this->parser->parse('_template', $this->data);
+    }
+
+    private function createSearchDropdown()
+    {
+        $data = array();
+        $data['daysSearch'] = form_dropdown('day', $this->timetable->getDays());
+        $data['periodSearch'] = form_dropdown('period', $this->timetable->getTimeSlots());
+
+        return $this->parser->parse('searchForm', $data, true);
     }
 
 }

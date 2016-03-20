@@ -2,6 +2,11 @@
 All notable changes to this project will be documented to this file.
 Change Log history will be recorded in descending order
 
+## 0.0.9
+- Add a search form to header
+- Add search page to show results
+- Load all timetable entries and display them on index page
+
 ## 0.0.8-alpha
 Added a basic template and layout files for the web view
 Tried loading the model but it broke
