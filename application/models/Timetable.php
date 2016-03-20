@@ -101,11 +101,14 @@ class Timetable extends CI_Model {
      * @return mixed bookings on that day and time
      */
     public function searchDaysOfWeek($day, $timeslot){
+        $days = array();
+
         foreach($this->daysofweek as $booking){
             if($booking->day == $day && $booking->time == $timeslot){
-                return $booking;
+                $days[] = $booking;
             }
         }
+        return $days;
     }
 
     /**
@@ -115,11 +118,14 @@ class Timetable extends CI_Model {
      * @return mixed bookings on that day and time
      */
     public function searchCourses($day, $timeslot){
+        $courses = array();
+
         foreach($this->courses as $booking){
             if($booking->day == $day && $booking->time == $timeslot){
                 return $booking;
             }
         }
+        return $courses;
     }
 
     /**
@@ -129,11 +135,14 @@ class Timetable extends CI_Model {
      * @return mixed bookings on that day and time
      */
     public function searchPeriods($day, $timeslot){
+        $periods = array();
+
         foreach($this->periods as $booking){
             if($booking->day == $day && $booking->time == $timeslot){
                 return $booking;
             }
         }
+        return $periods;
     }
 
 }
