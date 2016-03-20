@@ -21,10 +21,17 @@
         {/periods}
       </div>
   </div>
-<?php } else { ?>
+<?php } else if (isset($duplicates)) { ?>
   <div class="row">
     <div class="col-xs-12">
         <p>Error: There were duplicate entries found</p>
+        <p>{duplicates}</p>
+    </div>
+  </div>
+<?php } else { ?>
+  <div class="row">
+    <div class="col-xs-12">
+        <h3 class="text-danger">{bingo}</h3>
     </div>
   </div>
 <?php } ?>

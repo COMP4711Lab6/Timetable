@@ -2,6 +2,10 @@
 All notable changes to this project will be documented to this file.
 Change Log history will be recorded in descending order
 
+## 0.1
+- Update Timetable Model to find duplicates
+- Update search view to display an error if duplicates are found
+
 ## 0.0.9
 - Add a search form to header
 - Add search page to show results

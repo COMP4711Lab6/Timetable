@@ -23,14 +23,29 @@ class Welcome extends MY_Controller {
     $courseMatch = $this->timetable->searchCourses($inputDay,$inputPeriod);
     $periodMatch = $this->timetable->searchPeriods($inputDay,$inputPeriod);
 
-    if ($dayMatch != null
-    	&& $courseMatch != null
-    	&& $periodMatch != null) {
-    	$this->data['bingo'] = "Bingo!";
+    // Display the result found if there are no conflicts
+    if (count($dayMatch) == 1
+    	&& count($courseMatch) == 1
+    	&& count($periodMatch) == 1) {
 
+    	$this->data['bingo'] = "Bingo!";
     	$periods = array();
 	    $periods[] = $periodMatch;
 	    $this->data['periods'] = $periods;
+    }
+    // Uh oh, we found a conflict in the schedule, display an error
+    else if (count($dayMatch) > 1
+    			|| count($courseMatch) > 1
+    			|| count($periodMatch) > 1) {
+
+    	$days = "Day Entries: " . count($dayMatch) . ", ";
+			$courses = "Course Entries: " . count($courseMatch) . ", ";
+			$periods = "Period Entries: " . count($periodMatch);
+    	$this->data['duplicates'] = $days . $courses . $periods;
+    }
+    // No entires found :(
+    else {
+    	$this->data['bingo'] = "No Bingo :(";
     }
 
     $this->data['pagetitle'] = "Search Result";
